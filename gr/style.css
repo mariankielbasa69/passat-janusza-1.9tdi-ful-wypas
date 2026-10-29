@@ -1,0 +1,81 @@
+body {
+	background-color: #cfe8ff;
+}
+
+#ambulance {
+	width: 500px;
+	height: 300px ;
+	padding-top: 200px;
+	border: 1px solid black;
+	border-radius: 200px 5px 10px 20px;
+	text-align: center;
+	color: red;
+	font-family:  monospace;
+	font-size: 64px;
+	background: linear-gradient(0deg, #ffffff 0%, #ff6767 9%, #ffffff 18%, #0d2aff 33%, #ffffff 70%, #fd2d2d 73%, #ffffff 84%, #ffffff 100%);
+}
+
+.wheel {
+	width: 90px;
+	height: 90px;
+	background: #ffffff;
+	border: 10px solid black;
+	border-radius: 100px;
+	text-align: center;
+	animation: spin	0.1s linear infinite;
+}
+
+#wheel-front {
+	position: relative;
+	bottom: 50px;
+	left: 70px;
+}
+
+#wheel-back {
+	position: relative;
+	bottom: 150px;
+	left: 350px;
+}
+
+@keyframes spin {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg) ;}
+}
+
+#siren {
+	position: relative;
+	left: 200px;
+	width: 100px;
+	height: 100px;
+	background-color: black;
+	border-radius: 50px 50px 5px 5px
+}
+
+#siren:hover {
+	animation: siren 1s infinite;
+}
+
+@keyframes siren {
+	0% { background-color: black;}
+	25% { background-color: blue;}
+	75% { background-color: red;}
+
+
+}
+
+#emergency {
+	position: absolute;
+	right: 30%;
+	top: 200px;
+	background: red;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	border: 2px solid blue;
+	border-radius: 10px;
+	transition: transform 1s;
+}
+
+#emergency:hover {
+	transform: scale(1.5);
+}
